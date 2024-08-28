@@ -1,0 +1,17 @@
+name: Action 40
+
+on:
+  push:
+    branches: ['main']
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - id: test
+      run: |
+        echo "i is: $i"
+      name: Echo i
+      env:
+        i: "40"
